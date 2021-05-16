@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Car Registration Form</title>
+<link rel="stylesheet" href="../Assignment 2/Assignment2.css">
+	
+<script>
+	function validateForm() {
+		alert("Name: "+document.getElementById("name").value+
+			  "\nPhone No: "+document.getElementById("phone").value+
+			  "\nCar: "+document.getElementById("car").value+
+			  "\nDate: "+document.getElementById("date").value+
+			  "\nEmail: "+document.getElementById("email").value
+		);
+			return false;
+	}
+	</script>
+</head>
+
+<body>
+	<div class="bg_color_div">
+		<div class="wrap_div">
+			<div class="center_card_div">
+				<div class="center_card_heading"></div>
+				<div class="center_card_body">
+					<h2 class="title_text">Car Registration Form</h2>
+					<form action="" name="registration_form" method="post">
+						<div class="textfield_div">
+							<span class="textfield_title" >Name:</span> <br>
+    						<input class="textfield_style" type="text" id="name" name="name" placeholder:"name" 
+							onkeypress="return /[a-z]/i.test(event.key)" required>
+						</div>
+						<div class="textfield_div">
+							<span class="textfield_title" >Phone:</span> <br>
+    						<input class="textfield_style" type="number" id="phone" name="phone" placeholder:"phone">
+						</div>
+						<div class="textfield_div">
+							<span class="textfield_title" >Car Type:</span> <br>
+    						<input class="textfield_style" type="text" id="car" name="car" placeholder:"car"
+							onkeypress="return /[a-z]/i.test(event.key)" required>
+						</div>
+						<div class="textfield_div">
+							<span class="textfield_title" >Registration Date:</span> <br>
+    						<input class="textfield_style" type="date" id="date" name="date" placeholder:"date">
+						</div>
+						<div class="textfield_div">
+							<span class="textfield_title" >Email:</span> <br>
+    						<input class="textfield_style" type="email" id="email" name="email" placeholder:"email">
+						</div>
+						<div class="button_div">
+							<button class="button submit_button_color"  id="submit" name="submit"  onclick="validateForm()">Submit</button>
+    						<input class="button reset_button_color" type="reset" id="reset" name="reset" >
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
